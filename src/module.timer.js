@@ -1,9 +1,5 @@
-/** Тестировалось на библиотеки jQuery v3.2.1 */
-
 // Включаем строгий режим
 "use strict";
-
-
 
 /** */
 (function($) {
@@ -19,7 +15,6 @@
 	var MODULE_DESCRIPTION = 'Таймер.';
 	/** Объект */
 	var object_module = {};
-
 
 	/**
 	 * Формирует текст для вывода
@@ -38,7 +33,6 @@
 
 		return $min + ':' + $sec;
 	}
-
 
 	/**
 	 * Осуществляет обратный отсчёт
@@ -67,7 +61,6 @@
 		}
 	}
 
-
 	/**
 	 * Устанавливает контрольное время таймера (точка отсчёта)
 	 * @param $timerObj Объект таймера
@@ -78,7 +71,6 @@
 		// Запоминаем контрольную точку
 		window.localStorage.setItem($timerObj.timerKey(), $str);
 	}
-
 
 	/**
 	 * Активирует таймер
@@ -115,7 +107,6 @@
 		return $timerObj;
 	}
 
-
 	/** Возвращает объект с информацией о модуле */
 	object_module.info = function() {
 		return {
@@ -133,8 +124,7 @@
 		alert(MODULE_NAME + '\nВерсия: ' + MODULE_VERSION + '\nДата: ' + MODULE_DATE + '\nРазработчик: ' + MODULE_AUTHOR + '\n\n' + MODULE_DESCRIPTION);
 	};
 
-
 	window[MODULE_NAME] = object_module;
 
-	/**/
+/**/
 }(jQuery));
